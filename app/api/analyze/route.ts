@@ -7,8 +7,17 @@ export async function POST(req: NextRequest) {
         const body = await req.json();
         const { query, datasetMeta, allRows } = body;
 
+        // 0. Verify Environment
+        const apiKey = process.env.GEMINI_API_KEY || process.env.NEXT_PUBLIC_GEMINI_API_KEY;
+        if (!apiKey) {
+            console.error("DEPLOYMENT_ERROR: GEMINI_API_KEY is missing from environment.");
+            return NextResponse.json({
+                error: "API Key Missing. Please add GEMINI_API_KEY to your Vercel Environment Variables."
+            }, { status: 500 });
+        }
+
         if (!query || !datasetMeta || !allRows) {
-            return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
+            return NextResponse.json({ error: "Missing required fields in request body" }, { status: 400 });
         }
 
         // 1. Ask Gemini to interpret the query into an AnalysisIntent

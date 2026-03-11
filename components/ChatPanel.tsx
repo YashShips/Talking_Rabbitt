@@ -70,8 +70,18 @@ export function ChatPanel({ dataset, onChartUpdate, onInsightUpdate }: ChatPanel
             });
 
             if (!response.ok) {
-                const errorData = await response.json().catch(() => ({}));
-                throw new Error(errorData.error || "Failed to process request");
+                const contentType = response.headers.get("content-type");
+                let errorMessage = "Failed to process request";
+
+                if (contentType && contentType.includes("application/json")) {
+                    const errorData = await response.json().catch(() => ({}));
+                    errorMessage = errorData.error || errorMessage;
+                } else {
+                    const text = await response.text().catch(() => "");
+                    console.error("RAW_ERROR_PAGE:", text);
+                    errorMessage = `Server Error (${response.status}): ${response.statusText}`;
+                }
+                throw new Error(errorMessage);
             }
 
             const data = await response.json();
