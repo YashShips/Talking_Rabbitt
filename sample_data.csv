@@ -1,0 +1,121 @@
+date,region,product,revenue,units_sold,sales_rep
+2024-01-07,Latin America,Monitor,10976.64,32,Fiona
+2024-01-11,Europe,Headphones,6237.79,61,Alice
+2024-01-16,Europe,Smartphone,6218.4,10,Diana
+2024-01-20,North America,Headphones,13275.59,116,Fiona
+2024-01-26,Europe,Laptop,96921.19,121,Hannah
+2024-01-30,North America,Smartphone,13576.34,22,Diana
+2024-02-01,Europe,Monitor,40820.84,104,Alice
+2024-02-02,Latin America,Monitor,31548.2,89,George
+2024-02-05,Europe,Tablet,27637.58,77,Ethan
+2024-02-07,North America,Monitor,65983.39,164,Bob
+2024-02-07,Europe,Headphones,7687.33,72,Fiona
+2024-02-12,Latin America,Smartphone,66753.48,123,Ethan
+2024-02-13,Latin America,Laptop,180857.3,199,Charlie
+2024-02-13,Europe,Keyboard,8690.12,109,Diana
+2024-02-17,Europe,Smartphone,65118.28,109,Diana
+2024-02-17,Latin America,Tablet,5446.81,16,Charlie
+2024-02-17,Europe,Keyboard,6164.88,84,Diana
+2024-02-22,North America,Monitor,9720.59,29,Fiona
+2024-02-22,Asia Pacific,Keyboard,13798.56,158,Alice
+2024-02-24,Latin America,Smartphone,32736.99,50,Hannah
+2024-02-27,Asia Pacific,Monitor,15531.34,45,Ethan
+2024-02-29,Asia Pacific,Smartphone,104538.2,153,Ethan
+2024-03-05,Latin America,Keyboard,2772.2,34,Diana
+2024-03-06,Latin America,Headphones,5242.48,47,George
+2024-03-06,North America,Tablet,43892.02,98,Alice
+2024-03-09,Asia Pacific,Laptop,30894.48,32,Charlie
+2024-03-11,Europe,Smartphone,65395.83,103,Diana
+2024-03-12,North America,Keyboard,17345.99,194,Bob
+2024-03-12,Europe,Keyboard,11978.45,148,George
+2024-03-16,North America,Laptop,69054.4,67,Bob
+2024-03-19,Europe,Keyboard,9301.46,113,George
+2024-03-20,Europe,Tablet,27374.71,60,Alice
+2024-03-22,Latin America,Tablet,27257.97,76,Fiona
+2024-03-24,Latin America,Monitor,29703.6,74,Diana
+2024-03-24,Europe,Monitor,3479.66,11,Fiona
+2024-03-24,Asia Pacific,Laptop,118105.78,153,Ethan
+2024-03-27,North America,Tablet,57074.09,136,Fiona
+2024-04-03,Asia Pacific,Monitor,26473.83,68,Bob
+2024-04-03,Latin America,Smartphone,62092.93,95,Fiona
+2024-04-18,Latin America,Monitor,58419.83,169,Ethan
+2024-04-18,Europe,Keyboard,6516.37,84,Fiona
+2024-04-22,Latin America,Headphones,9966.6,76,Alice
+2024-04-27,North America,Laptop,69787.7,89,Diana
+2024-04-30,Asia Pacific,Tablet,38456.04,86,Bob
+2024-05-04,Latin America,Monitor,16292.42,53,George
+2024-05-07,Europe,Smartphone,83886.56,142,George
+2024-05-12,Europe,Keyboard,6478.46,75,Hannah
+2024-05-13,Europe,Keyboard,14201.6,188,Ethan
+2024-05-15,Latin America,Tablet,47865.78,113,Hannah
+2024-05-19,Asia Pacific,Headphones,7414.37,58,Diana
+2024-05-22,Latin America,Smartphone,76335.71,143,Hannah
+2024-05-22,Latin America,Tablet,9910.92,25,Alice
+2024-05-23,Asia Pacific,Headphones,844.19,7,Diana
+2024-05-28,North America,Smartphone,17352.68,30,Hannah
+2024-06-06,Europe,Laptop,66136.13,66,Bob
+2024-06-09,North America,Laptop,137634.87,154,Charlie
+2024-06-14,Europe,Laptop,76231.07,76,Diana
+2024-06-16,Latin America,Keyboard,6504.47,80,Diana
+2024-06-21,Latin America,Keyboard,4144.09,47,Charlie
+2024-06-26,Latin America,Keyboard,6895.84,99,Fiona
+2024-06-28,Asia Pacific,Smartphone,31884.1,62,Diana
+2024-06-28,Latin America,Keyboard,10784.56,142,Alice
+2024-06-28,Europe,Keyboard,1908.49,22,Alice
+2024-06-30,Latin America,Monitor,48137.15,124,Alice
+2024-07-02,Europe,Keyboard,5712.44,68,Fiona
+2024-07-05,Latin America,Laptop,177381.42,175,Fiona
+2024-07-12,North America,Headphones,10548.69,80,Fiona
+2024-07-13,Asia Pacific,Smartphone,68828.7,121,George
+2024-07-14,Latin America,Headphones,9450.16,69,Alice
+2024-07-14,North America,Monitor,19425.76,61,Hannah
+2024-07-18,Latin America,Headphones,25175.58,196,Diana
+2024-07-21,Europe,Keyboard,12783.99,170,Fiona
+2024-07-23,Asia Pacific,Tablet,10032.59,22,Ethan
+2024-07-24,Asia Pacific,Laptop,59681.26,59,Fiona
+2024-07-24,North America,Smartphone,52059.57,102,George
+2024-07-25,North America,Headphones,8353.19,68,Alice
+2024-07-26,North America,Tablet,28487.31,78,Fiona
+2024-07-29,Europe,Tablet,19551.82,45,Bob
+2024-08-03,Latin America,Keyboard,17574.8,196,Ethan
+2024-08-11,North America,Monitor,48253.66,152,Alice
+2024-08-12,Latin America,Laptop,56145.44,68,Fiona
+2024-08-14,North America,Laptop,176951.87,171,Alice
+2024-08-21,Latin America,Keyboard,11045.3,152,George
+2024-08-25,Latin America,Tablet,4791.8,12,Fiona
+2024-08-26,Latin America,Monitor,56629.14,177,Hannah
+2024-08-26,Asia Pacific,Tablet,19397.23,47,Bob
+2024-09-06,Europe,Tablet,46200.14,116,George
+2024-09-10,Latin America,Smartphone,26379.8,42,Alice
+2024-09-13,Europe,Headphones,4266.84,32,Ethan
+2024-09-15,North America,Headphones,7027.72,55,George
+2024-09-17,Latin America,Laptop,153988.84,198,Bob
+2024-10-06,North America,Tablet,62570.66,154,George
+2024-10-07,Latin America,Smartphone,129688.47,195,Hannah
+2024-10-13,Latin America,Headphones,21082.53,196,Diana
+2024-10-14,North America,Laptop,24483.93,24,Charlie
+2024-10-21,Latin America,Monitor,2378.93,6,Ethan
+2024-10-21,Latin America,Monitor,59845.03,188,Diana
+2024-10-22,Europe,Keyboard,1520.2,22,Diana
+2024-10-25,Latin America,Tablet,28040.42,61,Charlie
+2024-10-29,Latin America,Laptop,9483.57,12,Diana
+2024-11-02,Asia Pacific,Monitor,2783.22,9,Fiona
+2024-11-05,Asia Pacific,Laptop,169807.54,191,Bob
+2024-11-09,North America,Keyboard,10977.02,146,Bob
+2024-11-11,Latin America,Monitor,44567.45,116,Ethan
+2024-11-13,North America,Monitor,62069.91,173,Fiona
+2024-11-14,North America,Monitor,55654.74,156,Alice
+2024-11-16,Europe,Tablet,40867.87,117,Ethan
+2024-11-21,Asia Pacific,Smartphone,56820.92,99,Ethan
+2024-11-21,Latin America,Keyboard,3451.87,44,Ethan
+2024-11-22,Asia Pacific,Smartphone,114368.9,194,George
+2024-11-23,North America,Laptop,162816.04,194,Diana
+2024-11-23,Europe,Smartphone,64725.19,100,Alice
+2024-12-05,North America,Keyboard,6493.85,81,George
+2024-12-07,Asia Pacific,Monitor,61675.19,161,George
+2024-12-10,North America,Laptop,103854.71,108,Bob
+2024-12-14,North America,Keyboard,12214.99,142,Fiona
+2024-12-16,Asia Pacific,Laptop,62173.86,63,Fiona
+2024-12-17,Asia Pacific,Headphones,14435.25,130,Alice
+2024-12-25,North America,Headphones,18062.89,167,Diana
+2024-12-28,Latin America,Laptop,140056.93,138,Diana

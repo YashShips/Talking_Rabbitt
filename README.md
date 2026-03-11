@@ -1,36 +1,110 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🐰 Talking Rabbitt
 
-## Getting Started
+> **Conversational Business Intelligence** — Talk to your business data.
 
-First, run the development server:
+![Talking Rabbitt - Cyberpunk AI Dashboard](./public/demo-placeholder.png)
 
-```bash
+Talking Rabbitt is a modern, futuristic AI product MVP that allows users to upload a dataset (CSV) and ask questions about it in natural language. The system analyzes the data on the fly and returns insights and dynamic visualizations (Bar, Line, Pie charts).
+
+Built with a **Cyberpunk AI Dashboard** aesthetic, it features:
+- **Neon Accents** (Cyan, Purple, Electric Blue)
+- **Glassmorphism Components**
+- **Dynamic Animations** (Framer Motion)
+- **Real-time Charting** (Recharts)
+
+---
+
+## 🚀 Tech Stack
+
+- **Frontend & Backend Workflow**: Next.js 15 (App Router)
+- **Styling**: Tailwind CSS v4, custom Cyberpunk utility classes
+- **Icons**: Lucide React
+- **Animations**: Framer Motion
+- **Data Parsing**: PapaParse
+- **Visualization**: Recharts
+- **AI Engine**: Google Gemini API (`gemini-2.5-flash`) via `@google/genai`
+
+---
+
+## 🛠 Project Structure
+
+Because this MVP uses modern Next.js methodologies, both the frontend and backend are housed within the same application:
+
+\`\`\`
+talking-rabbitt/
+│
+├─ app/
+│   ├─ page.tsx               # Main Dashboard UI
+│   ├─ layout.tsx             # Root Layout (Top Navigation)
+│   ├─ globals.css            # Global Styles & Cyberpunk Theme
+│   └─ api/analyze/route.ts   # Backend API Endpoint (Proxy to Gemini)
+│
+├─ components/
+│   ├─ UploadPanel.tsx        # Drag & Drop Dataset Upload
+│   ├─ DatasetPreview.tsx     # Tabular Data Preview
+│   ├─ ChatPanel.tsx          # AI Conversation Interface
+│   └─ ChartPanel.tsx         # Real-time Data Visualization
+│
+├─ lib/
+│   ├─ dataAnalyzer.ts        # Fast, functional data aggregation and filtering
+│   ├─ gemini.ts              # AI prompting and parsing logic
+│   └─ utils.ts               # Tailwind class merging utility
+│
+└─ ...
+\`\`\`
+
+---
+
+## 🏁 Getting Started Locally
+
+### Prerequisites
+- Node.js 18.x or later
+- A [Google Gemini API Key](https://aistudio.google.com/app/apikey)
+
+### 1. Install Dependencies
+Navigate into the project directory and install packages:
+\`\`\`bash
+cd talking-rabbitt
+npm install
+\`\`\`
+
+### 2. Configure Environment Variables
+Create a \`.env.local\` file in the root directory and add your Gemini API Key:
+\`\`\`env
+NEXT_PUBLIC_GEMINI_API_KEY=your_gemini_api_key_here
+\`\`\`
+
+### 3. Run the Development Server
+Start the Next.js local server:
+\`\`\`bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+\`\`\`
+Visit `http://localhost:3000` in your browser.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🌐 Deployment Instructions
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This project is optimized for deployment on [Vercel](https://vercel.com/).
 
-## Learn More
+1. Push your code to a GitHub repository.
+2. Log into Vercel and click **Add New > Project**.
+3. Import your GitHub repository.
+4. Expand the **Environment Variables** section and add \`NEXT_PUBLIC_GEMINI_API_KEY\` with your actual key.
+5. Click **Deploy**.
 
-To learn more about Next.js, take a look at the following resources:
+Alternatively, you can build and start the server manually for custom hosting:
+\`\`\`bash
+npm run build
+npm run start
+\`\`\`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🧠 How It Works
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **Upload Dataset**: The user uploads a CSV file via `react-dropzone`. `PapaParse` reads the file quickly and generates a data preview.
+2. **Conversation**: The user types a natural language question (e.g., "Which region generated the highest revenue?").
+3. **AI Interpretation**: The backend (`lib/gemini.ts`) analyzes the question and dataset headers to output a structured JSON execution plan (filters, aggregations, chart type).
+4. **Data Aggregation**: `lib/dataAnalyzer.ts` strictly takes the execution plan and functionally groups, filters, and sorts the dataset.
+5. **Visualization**: The resulting aggregated data is rendered immediately in `components/ChartPanel.tsx`.
