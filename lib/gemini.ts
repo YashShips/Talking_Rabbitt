@@ -1,7 +1,12 @@
 import { GoogleGenAI } from "@google/genai";
 
+const apiKey = process.env.GEMINI_API_KEY || process.env.NEXT_PUBLIC_GEMINI_API_KEY || "";
+if (!apiKey) {
+    console.warn("WARNING: GEMINI_API_KEY is not set in environment variables.");
+}
+
 const ai = new GoogleGenAI({
-    apiKey: process.env.NEXT_PUBLIC_GEMINI_API_KEY || process.env.GEMINI_API_KEY || "",
+    apiKey: apiKey,
 });
 
 export async function interpretQuery(
@@ -48,7 +53,7 @@ Ensure returned column names exactly match the spelling/casing in the Headers. D
 
     try {
         const response = await ai.models.generateContent({
-            model: "gemini-2.5-flash",
+            model: "gemini-2.0-flash",
             contents: prompt,
             config: {
                 temperature: 0.1,

@@ -69,7 +69,10 @@ export function ChatPanel({ dataset, onChartUpdate, onInsightUpdate }: ChatPanel
                 })
             });
 
-            if (!response.ok) throw new Error("Failed to process request");
+            if (!response.ok) {
+                const errorData = await response.json().catch(() => ({}));
+                throw new Error(errorData.error || "Failed to process request");
+            }
 
             const data = await response.json();
 
