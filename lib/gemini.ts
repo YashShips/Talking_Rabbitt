@@ -81,6 +81,21 @@ Ensure returned column names exactly match the spelling/casing in the Headers. D
 
     } catch (error: any) {
         console.error("Gemini interpretation error:", error);
-        throw new Error(error.message || "Failed to interpret query.");
+
+        let message = error.message || "Failed to interpret query.";
+
+        // Handle stringified JSON error from Google SDK
+        if (typeof message === 'string' && (message.includes('429') || message.includes('RESOURCE_EXHAUSTED'))) {
+            try {
+                const parsedError = JSON.parse(message);
+                if (parsedError.error?.message) {
+                    message = `AI Quota Exhausted: ${parsedError.error.message}`;
+                }
+            } catch {
+                message = "AI service is currently at its free-tier limit. Please wait a minute and try again.";
+            }
+        }
+
+        throw new Error(message);
     }
 }
